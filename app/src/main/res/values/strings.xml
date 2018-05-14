@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FragmentDemo</string>
+    <string name="home_shop">test1</string>
+    <string name="home_share">test2</string>
+    <string name="home_gift">test3</string>
+    <string name="home_order">test4</string>
+</resources>
