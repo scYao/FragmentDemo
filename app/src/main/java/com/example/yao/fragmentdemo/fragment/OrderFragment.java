@@ -17,4 +17,6 @@ public class OrderFragment extends Fragment {
         View view = inflater.inflate(R.layout.order_fragment, null);
         return view;
     }
+
+    public void  setText(String s){}
 }

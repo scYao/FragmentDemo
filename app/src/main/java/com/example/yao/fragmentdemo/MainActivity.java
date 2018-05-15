@@ -13,7 +13,7 @@ import com.example.yao.fragmentdemo.fragment.OrderFragment;
 import com.example.yao.fragmentdemo.fragment.ShareFragment;
 import com.example.yao.fragmentdemo.fragment.ShopFragment;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener,ShareFragment.MyListener{
     private static final String TAG = "MainActivity";
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
@@ -68,5 +68,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         fragmentTransaction.commit();
 
+    }
+
+
+    private void sendValue(){
+        String s ="sss";
+        ShopFragment shopFragment = new ShopFragment();
+        Bundle bundle = new Bundle();
+        bundle.putString("info",s);
+        shopFragment.setArguments(bundle);
+
+        fragmentManager = getFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.content_layout, shopFragment);
+        fragmentTransaction.commit();
+    }
+
+    //fragment回传的数据
+    @Override
+    public void sendMessage(String s) {
+        if (s !=null && !"".equals(s)){
+
+        }
     }
 }

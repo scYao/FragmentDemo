@@ -15,6 +15,11 @@ public class ShopFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.shop_fragment, null);
+
+        Bundle bundle = getArguments();
+        if (bundle != null){
+            String info = bundle.getString("info");
+        }
         return view;
     }
 }
